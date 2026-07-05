@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuego Plumbing LLC | Dallas-Fort Worth Multi-Family &amp; New Construction Plumbing</title>
+<meta name="description" content="Fuego Plumbing LLC provides licensed subcontracted plumbing labor for multi-family and new construction projects across Dallas County, Ellis County, and the DFW Metroplex.">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand">
+      <img src="assets/logo.png" alt="Fuego Plumbing LLC logo">
+      <span>FUEGO PLUMBING LLC</span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    <ul id="navMenu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <img class="logo" src="assets/logo.png" alt="Fuego Plumbing LLC logo">
+  <h1>FUEGO PLUMBING LLC</h1>
+  <p class="tagline"><span class="hot">Hot Service.</span> <span class="cool">Cool Solutions.</span></p>
+  <p class="mission">Licensed plumbing subcontractor serving multi-family and new construction projects across the Dallas&ndash;Fort Worth Metroplex &mdash; built on quality craftsmanship and a commitment to workforce development.</p>
+  <div class="cta-row">
+    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+    <a href="#services" class="btn btn-outline">Our Services</a>
+  </div>
+</section>
+
+<section id="services" class="section-alt">
+  <div class="container">
+    <h2 class="section-title">Services <span>Offered</span></h2>
+    <p class="section-sub">Subcontracted plumbing labor for multi-family residential and new construction projects.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">1</div>
+        <h3>Underground Rough-In</h3>
+        <p>Underground rough-in plumbing installation for multi-family and new construction projects.</p>
+      </div>
+      <div class="card">
+        <div class="icon">2</div>
+        <h3>Stack-Out Rough-In</h3>
+        <p>Stack-out (top-out) rough-in plumbing installation, including domestic water piping.</p>
+      </div>
+      <div class="card">
+        <div class="icon">3</div>
+        <h3>Fixture Installation</h3>
+        <p>Fixture installation and connection &mdash; tubs, showers, faucets, toilets, and related fittings.</p>
+      </div>
+      <div class="card">
+        <div class="icon">4</div>
+        <h3>GC Coordination</h3>
+        <p>Scheduling and inspection coordination with general contractors and site supervisors.</p>
+      </div>
+      <div class="card">
+        <div class="icon">5</div>
+        <h3>Licensed &amp; Compliant</h3>
+        <p>All work performed in compliance with TSBPE regulations, under the license of Andrew Gonzales, Master Plumber.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About <span>Fuego</span></h2>
+    <p class="section-sub">Fuego Plumbing LLC is a Texas-based plumbing subcontractor led by an experienced management team combining business operations, licensed field expertise, and a long-term vision for workforce development.</p>
+    <div class="people">
+      <div class="person">
+        <div class="avatar">CG</div>
+        <h3>Cassie Gonzales</h3>
+        <div class="role">Managing Member</div>
+        <p class="bio">Oversees business operations, client relations, financial management, and workforce development strategy. Registered plumbing apprentice with TSBPE.</p>
+      </div>
+      <div class="person">
+        <div class="avatar">AG</div>
+        <h3>Andrew Gonzales</h3>
+        <div class="role">Co-Managing Member &amp; Master Plumber</div>
+        <p class="bio">Licensed Texas Master Plumber and license holder of record for all Fuego field work, qualified to supervise apprentices and journeymen under TSBPE regulations.</p>
+      </div>
+    </div>
+    <p class="area-list"><strong>Service Area:</strong> Dallas County &middot; Ellis County &middot; DFW Metroplex</p>
+  </div>
+</section>
+
+<section id="contact" class="section-alt">
+  <div class="container contact-wrap">
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+    <p class="section-sub">Interested in working with Fuego Plumbing LLC? Reach out and we'll follow up.</p>
+    <div class="contact-card">
+      <a class="email" href="mailto:fuegoplumbingllc@gmail.com">fuegoplumbingllc@gmail.com</a>
+      <p class="contact-meta">Fuego Plumbing LLC &middot; Waxahachie, TX &middot; Serving Dallas County, Ellis County &amp; the DFW Metroplex</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; <span id="year"></span> Fuego Plumbing LLC. <span class="fire">Hot Service.</span> <span class="water">Cool Solutions.</span>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('navMenu');
+  toggle.addEventListener('click', () => menu.classList.toggle('open'));
+  document.querySelectorAll('#navMenu a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+</script>
+
+</body>
+</html>
