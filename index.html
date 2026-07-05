@@ -95,9 +95,15 @@
 <section id="contact" class="section-alt">
   <div class="container contact-wrap">
     <h2 class="section-title">Get In <span>Touch</span></h2>
-    <p class="section-sub">Interested in working with Fuego Plumbing LLC? Reach out and we'll follow up.</p>
+    <p class="section-sub">Interested in working with Fuego Plumbing LLC? Fill out the form below and we'll follow up.</p>
     <div class="contact-card">
-      <a class="email" href="mailto:fuegoplumbingllc@gmail.com">fuegoplumbingllc@gmail.com</a>
+      <form id="contactForm" class="contact-form">
+        <input type="text" id="cf-name" placeholder="Your Name" required>
+        <input type="email" id="cf-email" placeholder="Your Email" required>
+        <textarea id="cf-message" placeholder="How can we help?" rows="4" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+      <p class="contact-meta">Or email us directly at <a class="email" href="mailto:fuegoplumbingllc@gmail.com">fuegoplumbingllc@gmail.com</a></p>
       <p class="contact-meta">Fuego Plumbing LLC &middot; Waxahachie, TX &middot; Serving Dallas County, Ellis County &amp; the DFW Metroplex</p>
     </div>
   </div>
@@ -113,6 +119,16 @@
   const menu = document.getElementById('navMenu');
   toggle.addEventListener('click', () => menu.classList.toggle('open'));
   document.querySelectorAll('#navMenu a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = document.getElementById('cf-name').value;
+    const email = document.getElementById('cf-email').value;
+    const message = document.getElementById('cf-message').value;
+    const subject = encodeURIComponent('Website Inquiry from ' + name);
+    const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+    window.location.href = 'mailto:fuegoplumbingllc@gmail.com?subject=' + subject + '&body=' + body;
+  });
 </script>
 
 </body>
