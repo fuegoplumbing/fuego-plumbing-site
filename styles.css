@@ -125,10 +125,13 @@ p.section-sub { text-align: center; color: var(--text-dim); max-width: 620px; ma
 }
 .contact-card a.email { color: var(--water-1); font-weight: 700; text-decoration: none; }
 .contact-card a.email:hover { text-decoration: underline; }
-.contact-meta { margin-top: 18px; color: var(--text-dim); font-size: 14px; }
+.contact-card a.phone { color: var(--fire-1); font-weight: 700; text-decoration: none; }
+.contact-card a.phone:hover { text-decoration: underline; }
+.contact-meta { margin-top: 18px; color: var(--text-dim); font-size: 14px; line-height: 1.8; }
 
-.contact-form { display: flex; flex-direction: column; gap: 16px; text-align: left; margin-bottom: 10px; }
+.contact-form { display: flex; flex-direction: column; gap: 16px; text-align: left; margin-bottom: 10px; width: 100%; }
 .contact-form input, .contact-form textarea {
+  width: 100%; display: block;
   background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
   padding: 12px 14px; color: var(--text); font-family: inherit; font-size: 14px; resize: vertical;
 }
